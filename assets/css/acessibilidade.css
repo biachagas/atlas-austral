@@ -1,0 +1,139 @@
+/* ---------- acessibilidade ----------
+   Componente reaproveitável (painel de Comércio Exterior da Bahia e site do Atlas Austral).
+   Usa só as cores da identidade, definidas em :root no style.css. Classes ligadas no <html> por acessibilidade.js. */
+
+/* tamanho do texto: tudo no site usa rem, então basta mudar o font-size do <html> */
+html { font-size: calc(100% * var(--a11y-escala, 1)); }
+html.apresentacao { font-size: calc(118% * var(--a11y-escala, 1)); }
+
+/* texto grande: o cabeçalho quebra em duas linhas em vez de esconder as abas */
+html.a11y-texto-grande .cab-linha { flex-wrap: wrap; row-gap: 4px; }
+html.a11y-texto-grande .abas { order: 3; flex-basis: 100%; }
+
+/* ---------- botão e painel ---------- */
+.a11y-botao { display: inline-flex; align-items: center; justify-content: center; padding: 6px 8px; line-height: 0; }
+.a11y-botao[aria-expanded="true"] { background: rgba(255,255,255,.95); color: var(--navy); }
+.a11y-botao-flutuante { position: fixed; right: 14px; bottom: 14px; z-index: 1790; background: var(--navy); color: #fff; }
+.a11y-fundo { position: fixed; inset: 0; background: rgba(12,30,51,.35); z-index: 1800; }
+.a11y-painel { position: fixed; top: 0; right: 0; bottom: 0; width: min(360px, 100vw); z-index: 1900; overflow-y: auto;
+  background: var(--branco); color: var(--texto); box-shadow: -6px 0 28px rgba(12,30,51,.28); border-left: 4px solid var(--exp);
+  font-size: .95rem; line-height: 1.4; }
+.a11y-fundo[hidden], .a11y-painel[hidden] { display: none; }
+.a11y-cab { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; background: var(--navy); color: #fff; position: sticky; top: 0; }
+.a11y-cab h2 { font-size: 1.25rem; color: #fff; }
+.a11y-cab h2:focus { outline: none; }
+.a11y-cab h2:focus-visible { outline: 3px solid #fff; }
+.a11y-fechar { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.4); color: #fff; border-radius: 7px; padding: 6px 10px; cursor: pointer; font-weight: 600; }
+.a11y-fechar:hover { background: rgba(255,255,255,.22); }
+.a11y-fechar:focus-visible { outline-color: #fff; }
+.a11y-corpo { padding: 14px 16px 22px; display: flex; flex-direction: column; gap: 14px; }
+.a11y-grupo { display: flex; flex-direction: column; gap: 6px; }
+.a11y-sub { margin: 0; font-weight: 700; }
+.a11y-tamanho { display: grid; grid-template-columns: 1fr auto 1fr; gap: 6px; align-items: stretch; }
+.a11y-nivel { align-self: center; min-width: 4.2em; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 1.05rem; }
+.a11y-op { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; cursor: pointer; font-weight: 600;
+  background: var(--branco); color: var(--texto); border: 1.5px solid var(--linha); border-radius: 8px; padding: 9px 11px; }
+.a11y-op:hover { border-color: var(--navy); }
+.a11y-op:disabled { opacity: .45; cursor: not-allowed; }
+.a11y-tamanho .a11y-op { justify-content: center; flex-direction: column; gap: 2px; text-align: center; font-size: .82rem; }
+.a11y-tamanho .a11y-op span { font-family: var(--f-titulo); font-size: 1.15rem; }
+.a11y-chave { flex: none; width: 34px; height: 20px; border-radius: 999px; background: var(--linha); position: relative; transition: background .15s; }
+.a11y-chave::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--branco); box-shadow: 0 1px 2px rgba(12,30,51,.3); transition: left .15s; }
+.a11y-liga[aria-pressed="true"] { border-color: var(--navy); }
+.a11y-liga[aria-pressed="true"] .a11y-chave { background: var(--exp-esc); }
+.a11y-liga[aria-pressed="true"] .a11y-chave::after { left: 17px; }
+.a11y-restaurar { justify-content: center; background: var(--navy); color: #fff; border-color: var(--navy); }
+.a11y-restaurar:hover { background: var(--navy-2); }
+.a11y-nota { margin: 0; font-size: .8rem; color: var(--texto-2); }
+@media (max-width: 640px) {
+  .a11y-painel { width: 100vw; border-left: 0; border-top: 4px solid var(--exp); }
+}
+
+/* ---------- 1. alto contraste ---------- */
+html.a11y-contraste { --texto-2: var(--texto); --linha: var(--navy); --areia: var(--branco); --sombra: none; }
+.a11y-contraste body { background: var(--branco); }
+.a11y-contraste .cartao { border: 2px solid var(--navy); }
+.a11y-contraste a { text-decoration: underline; text-underline-offset: 2px; color: var(--navy); }
+.a11y-contraste .cabecalho a { color: #fff; }
+.a11y-contraste .abas a { color: #fff; }
+.a11y-contraste .btn-claro { background: var(--navy); border: 2px solid #fff; }
+.a11y-contraste .mapa-legenda, .a11y-contraste .mapa-atrib, .a11y-contraste .dica { background: var(--branco); border: 2px solid var(--navy); color: var(--navy); }
+.a11y-contraste .mapa-atrib a { color: var(--navy); }
+.a11y-contraste .tabela tbody th, .a11y-contraste .tabela td { border-bottom-color: var(--navy); }
+.a11y-contraste .eixo line, .a11y-contraste .eixo path { stroke: var(--navy); }
+
+/* ---------- 2. modo escuro (fundo Navy; mapas e gráficos mantêm as cores dos dados) ---------- */
+html.a11y-escuro { --texto: var(--areia); --texto-2: var(--areia-2); --branco: var(--navy-2); --linha: #4A5563; color-scheme: dark; }
+.a11y-escuro body { background: var(--navy); }
+.a11y-escuro main a, .a11y-escuro .btn-link { color: var(--imp); }
+.a11y-escuro .mapa-atrib a { color: #333; }
+.a11y-escuro .btn-perfil { color: var(--navy); }
+.a11y-escuro .texto-longo h3, .a11y-escuro .como-ler summary, .a11y-escuro .lista-seg summary { color: var(--areia); }
+.a11y-escuro .texto-longo h3 { border-bottom-color: var(--areia-2); }
+.a11y-escuro .opcao input, .a11y-escuro .chk input { accent-color: var(--areia); }
+/* amostras de cor na cor dos dados ganham moldura clara (o Navy dos dados some no fundo Navy) */
+.a11y-escuro .btn-grupo i, .a11y-escuro .chk [class*="sim-"] { outline: 1px solid var(--areia-2); outline-offset: 1px; }
+.a11y-escuro .cartao { box-shadow: none; border: 1px solid #4A5563; }
+/* superfícies claras internas viram Navy */
+.a11y-escuro .opcao:has(input:checked), .a11y-escuro .selecionado, .a11y-escuro .citar, .a11y-escuro .explica,
+.a11y-escuro .texto-longo code, .a11y-escuro .btn-grupo, .a11y-escuro .btn-grupo:hover, .a11y-escuro .btn-grupo.ativo,
+.a11y-escuro .grafico-vazio { background: var(--navy); }
+.a11y-escuro .tabela tbody tr, .a11y-escuro .tabela tbody tr:nth-child(even) { background: var(--navy); }
+.a11y-escuro .tabela tbody tr:hover, .a11y-escuro .tabela tbody tr.destaque { background: #4A5563; }
+.a11y-escuro .tabela td.neg { color: var(--imp); }
+.a11y-escuro .tabela td.pos { color: var(--exp); }
+.a11y-escuro .tabela tbody th, .a11y-escuro .tabela td { border-bottom-color: #4A5563; }
+.a11y-escuro .btn-grupo.ativo { border-color: var(--areia); }
+.a11y-escuro .campo select, .a11y-escuro .campo input, .a11y-escuro select, .a11y-escuro input { background: var(--navy); color: var(--areia); border-color: var(--areia-2); }
+.a11y-escuro .btn, .a11y-escuro .btn-play, .a11y-escuro .a11y-restaurar { border: 1px solid var(--areia-2); }
+.a11y-escuro .opcao:has(input:checked) { border-color: var(--areia); }
+.a11y-escuro .segmentado input:checked + span { background: var(--areia); color: var(--navy); }
+.a11y-escuro .rodape-pagina { border-top-color: var(--areia-2); }
+/* gráficos e elementos sobre o mapa ficam sobre placa clara: as cores dos dados (inclusive o Navy) continuam legíveis */
+.a11y-escuro .grafico, .a11y-escuro .faixa-grafico, .a11y-escuro .mapa-legenda, .a11y-escuro .mapa-ctrl,
+.a11y-escuro .mapa-atrib, .a11y-escuro .dica, .a11y-escuro .faixa-logos {
+  --texto: #0C1E33; --texto-2: #4A5563; --branco: #fff; --linha: #E4DACB; color: var(--texto); }
+.a11y-escuro .grafico, .a11y-escuro .faixa-grafico { background: var(--areia); border-radius: 8px; padding: 6px; }
+.a11y-escuro .grafico a { color: var(--imp-esc); }
+.a11y-escuro.a11y-contraste { --areia: #F3E7D3; --texto: #fff; --texto-2: #fff; --linha: var(--areia); }
+.a11y-escuro.a11y-contraste body { background: var(--navy); }
+.a11y-escuro.a11y-contraste .cartao { border: 2px solid var(--areia); }
+.a11y-escuro.a11y-contraste main a { color: #fff; }
+.a11y-escuro.a11y-contraste .btn-perfil { color: var(--navy); }
+.a11y-escuro.a11y-contraste .grafico .cartao, .a11y-escuro.a11y-contraste .grafico { --texto: #0C1E33; --texto-2: #0C1E33; }
+.a11y-escuro .a11y-painel { --branco: var(--navy-2); }
+
+/* ---------- 3. tons de cinza (filtro em cada bloco, não no <html>/<body>, para não quebrar o cabeçalho fixo) ---------- */
+.a11y-cinza .cabecalho, .a11y-cinza main, .a11y-cinza .dica, .a11y-cinza .a11y-painel { filter: grayscale(1); }
+
+/* ---------- 4. destacar links e botões ---------- */
+.a11y-links a, .a11y-links button, .a11y-links select, .a11y-links summary, .a11y-links [role="button"] {
+  text-decoration: underline !important; text-underline-offset: 3px; outline: 2px dashed var(--exp-esc); outline-offset: 2px; }
+.a11y-links .cabecalho a, .a11y-links .cabecalho button, .a11y-links .tabela thead button, .a11y-links .a11y-cab button,
+.a11y-escuro.a11y-links a, .a11y-escuro.a11y-links button, .a11y-escuro.a11y-links select { outline-color: var(--exp); }
+.a11y-links .grafico a, .a11y-links .grafico button { outline-color: var(--exp-esc); }
+.a11y-links :focus-visible { outline: 3px solid var(--exp) !important; outline-offset: 2px; }
+
+/* ---------- 5. destacar títulos ---------- */
+.a11y-titulos h1, .a11y-titulos h2, .a11y-titulos h3 { background: var(--areia-2); color: var(--navy); border-left: 5px solid var(--exp); padding: 2px 8px; border-radius: 0 4px 4px 0; }
+.a11y-titulos .cabecalho h1, .a11y-titulos .a11y-cab h2 { background: var(--navy-2); color: #fff; outline: 2px solid var(--exp); outline-offset: 1px; }
+
+/* ---------- 6. cursor grande (SVG embutido, preto e branco) ---------- */
+.a11y-cursor, .a11y-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath d='M3 2l15 11.5-6.6.6 3.9 7.4-2.9 1.5-3.9-7.5L3 20z' fill='%23000' stroke='%23fff' stroke-width='1.3' stroke-linejoin='round'/%3E%3C/svg%3E") 6 4, auto !important; }
+.a11y-cursor a, .a11y-cursor a *, .a11y-cursor button, .a11y-cursor button *, .a11y-cursor select, .a11y-cursor label,
+.a11y-cursor summary, .a11y-cursor [role="button"], .a11y-cursor .clicavel, .a11y-cursor .clicavel *, .a11y-cursor path.mun,
+.a11y-cursor .barra, .a11y-cursor .barra * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath d='M9 1.8a1.6 1.6 0 0 1 1.6 1.6V11l.4-.1V9.3a1.5 1.5 0 0 1 3 0v1.9l.4-.1v-1a1.5 1.5 0 0 1 3 0v1.5l.3-.1a1.5 1.5 0 0 1 2.9.6v4.6c0 3.4-2.4 6.1-5.8 6.1h-1.6c-2 0-3.6-1-4.6-2.6L4.5 14.4a1.6 1.6 0 0 1 2.5-2l.4.4V3.4A1.6 1.6 0 0 1 9 1.8z' fill='%23000' stroke='%23fff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 18 4, pointer !important; }
+.a11y-cursor input[type="text"], .a11y-cursor input[type="search"], .a11y-cursor textarea { cursor: text !important; }
+
+/* ---------- 7. pausar animações ---------- */
+.a11y-sem-animacao *, .a11y-sem-animacao *::before, .a11y-sem-animacao *::after {
+  transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+.a11y-sem-animacao .btn-play { display: none; }
+
+/* texto grande: a legenda do mapa cresce; os botões do mapa ficam sempre por cima dela */
+.a11y-texto-grande .mapa-ctrl { z-index: 6; }
+.a11y-texto-grande .mapa-legenda { left: 56px; }
+.a11y-escuro .kpi-v.desce::before { color: var(--exp); }
+.a11y-escuro .kpi-v.sobe::before { color: var(--imp); }

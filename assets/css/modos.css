@@ -1,0 +1,70 @@
+/* Atlas Austral · modos do menu de acessibilidade aplicados ao site (D105)
+   Carregar DEPOIS de atlas.css, acessibilidade.css e acessibilidade-atlas.css.
+   O componente do menu (o mesmo do painel) liga classes no <html>; aqui elas mudam as cores do site.
+   Os mapas e as fotos mantêm as cores originais. */
+
+/* ---------- modo escuro: fundo Navy, texto Areia ---------- */
+html.a11y-escuro{
+  --fundo:#0C1E33;--sup:#16304D;--sup-cx:rgba(243,231,211,.06);--tx:#F3E7D3;--fio:rgba(243,231,211,.20);--fio-2:rgba(243,231,211,.32);
+  --btn-fundo:#F3E7D3;--btn-tx:#0C1E33;--link:#F6A57A;--destaque-verde:#8FD3CE;
+  --img-curvas:none;--img-curvas-areia:none;color-scheme:dark
+}
+.a11y-escuro .topo{background:rgba(12,30,51,.94)}
+.a11y-escuro .logo-claro{display:none}
+.a11y-escuro .logo-escuro{display:block}
+.a11y-escuro .hero,.a11y-escuro .cab8{background:radial-gradient(40% 60% at 80% 50%,rgba(242,105,31,.18),transparent 70%),radial-gradient(30% 50% at 98% 90%,rgba(232,90,138,.20),transparent 70%),var(--fundo)}
+.a11y-escuro footer,.a11y-escuro .cons3,.a11y-escuro .cta{background:linear-gradient(120deg,rgba(242,105,31,.10),rgba(232,90,138,.16)),var(--fundo)}
+.a11y-escuro .faixa-sobre,.a11y-escuro .como{background:var(--sup)}
+.a11y-escuro .hero h1 em{color:#F6A57A}
+.a11y-escuro .busca{border-color:var(--fio-2)}
+.a11y-escuro .breve-linha li{border-color:rgba(143,211,206,.55)}
+.a11y-escuro .selo.doi{background:var(--tx);color:var(--fundo)}
+.a11y-escuro .rot.rbreve{background:var(--fundo);color:#8FD3CE;border-color:rgba(143,211,206,.6)}
+.a11y-escuro .mapa-svg .pais{fill:rgba(243,231,211,.14);stroke:rgba(243,231,211,.40)}
+.a11y-escuro .mapa-svg .pais.br{fill:rgba(243,231,211,.20)}
+.a11y-escuro .mapa-svg .grat path{stroke:rgba(243,231,211,.16)}
+.a11y-escuro .mapa-svg .lider{stroke:#8FD3CE}
+.a11y-escuro .mapa-svg .anc{fill:#8FD3CE}
+.a11y-escuro .recorte .mini{background:#F3E7D3}
+.a11y-escuro .bc .hach,.a11y-escuro .vazio-grande .hach{border-color:rgba(143,211,206,.6);background:repeating-linear-gradient(45deg,rgba(143,211,206,.35) 0 1.5px,transparent 1.5px 8px)}
+.a11y-escuro .aviso-and{background:rgba(98,183,178,.12);border-left-color:#8FD3CE}
+.a11y-escuro .sol .ico svg{stroke:#F6A57A}
+/* o cartão das logos institucionais continua branco (as logos não podem ser recoloridas: D03) */
+.a11y-escuro .cartao-logos{box-shadow:none}
+.a11y-escuro .pular{background:#F3E7D3;color:#0C1E33}
+
+/* ---------- alto contraste: fundo branco, texto e bordas Navy, sem degradês ---------- */
+html.a11y-contraste{--fundo:#fff;--sup:#fff;--sup-cx:#fff;--fio:#0C1E33;--fio-2:#0C1E33;--link:#7A2C0C;--destaque-verde:#134B48;--img-curvas:none;--img-curvas-areia:none}
+.a11y-contraste .topo,.a11y-contraste .hero,.a11y-contraste .cab8,.a11y-contraste footer,.a11y-contraste .cons3,
+.a11y-contraste .cta,.a11y-contraste .faixa-sobre,.a11y-contraste .como{background:#fff}
+.a11y-contraste .hero:after,.a11y-contraste .cab8:after{display:none}
+.a11y-contraste .topo,.a11y-contraste .cta,.a11y-contraste .faixa-sobre,.a11y-contraste .como{border:2px solid #0C1E33}
+.a11y-contraste a{text-decoration:underline;text-underline-offset:2px}
+.a11y-contraste .btn,.a11y-contraste .ic,.a11y-contraste .lang,.a11y-contraste .a11y-botao,.a11y-contraste .perfil,.a11y-contraste .filtro button{border:2px solid currentColor}
+.a11y-contraste .breve-linha li,.a11y-contraste .rot.rbreve{border-color:#134B48;color:#134B48}
+.a11y-contraste .capa .vel{background:rgba(12,30,51,.96)}
+.a11y-contraste.a11y-escuro{--fundo:#000;--sup:#000;--sup-cx:#000;--tx:#fff;--fio:#fff;--fio-2:#fff;--link:#FFC9A8;--destaque-verde:#A8F0EA;--btn-fundo:#fff;--btn-tx:#000}
+.a11y-contraste.a11y-escuro .topo,.a11y-contraste.a11y-escuro .hero,.a11y-contraste.a11y-escuro .cab8,.a11y-contraste.a11y-escuro footer,
+.a11y-contraste.a11y-escuro .cons3,.a11y-contraste.a11y-escuro .cta,.a11y-contraste.a11y-escuro .faixa-sobre,.a11y-contraste.a11y-escuro .como{background:#000;border-color:#fff}
+
+/* ---------- tons de cinza: o site inteiro (o menu fica colorido para continuar fácil de usar) ---------- */
+.a11y-cinza .topo,.a11y-cinza main,.a11y-cinza footer,.a11y-cinza .cab8,.a11y-cinza .hero,.a11y-cinza .pular{filter:grayscale(1)}
+
+/* ---------- destacar títulos (complemento do componente) ---------- */
+.a11y-titulos .capa h3{background:rgba(12,30,51,.9);color:#fff}
+
+/* ---------- ajustes sobre as regras gerais do componente (que foram escritas para o painel) ---------- */
+.a11y-escuro main a{color:var(--link)}
+.a11y-escuro main a.btn,.a11y-contraste a.btn{color:var(--btn-tx)}
+.a11y-escuro main a.btn.sec,.a11y-contraste a.btn.sec{color:var(--tx)}
+.a11y-escuro main a.capa,.a11y-contraste a.capa{color:#fff}
+.a11y-escuro main a.recorte,.a11y-escuro main a.rot.rbreve{color:inherit}
+.a11y-escuro a.recorte{color:var(--tx)}
+.a11y-escuro .perfil,.a11y-contraste .perfil,.a11y-escuro main a.perfil{color:var(--navy)}
+.a11y-escuro main a.rot{color:var(--navy)}
+.a11y-escuro .moldura-p a,.a11y-escuro main .moldura-p a{color:var(--laranja-txt)}
+.a11y-escuro .campo-cit select{background-color:var(--sup);color:var(--tx);border-color:var(--tx);
+  background-image:linear-gradient(45deg,transparent 50%,var(--tx) 50%),linear-gradient(135deg,var(--tx) 50%,transparent 50%)}
+.a11y-escuro .busca input{background:none;color:var(--tx)}
+.a11y-contraste.a11y-escuro body{background:#000}
+.a11y-contraste .topo a,.a11y-contraste .nav a{color:var(--tx)}

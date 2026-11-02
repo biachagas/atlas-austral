@@ -1,0 +1,29 @@
+/* ---------- acessibilidade: visual do Atlas Austral ----------
+   Carregar DEPOIS de acessibilidade.css (componente compartilhado com o painel).
+   Só muda a aparência do botão e do painel; o funcionamento é o mesmo do painel. */
+.a11y-botao{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--navy);background:none;color:var(--navy);cursor:pointer;padding:0;line-height:0}
+.a11y-botao svg{width:22px;height:22px}
+.a11y-botao[aria-expanded="true"]{background:var(--navy);color:#fff;box-shadow:inset 0 -3px 0 var(--rosa)}
+.a11y-fundo{background:rgba(12,30,51,.28);backdrop-filter:blur(1.5px)}
+.a11y-painel{width:min(380px,100vw);background:url(../img/fundos/curvas-areia.svg) right bottom/700px auto no-repeat,var(--creme);color:var(--navy);
+  border-left:0;box-shadow:-10px 0 34px rgba(232,90,138,.18);font-family:var(--f-x)}
+.a11y-painel:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--laranja),var(--rosa))}
+.a11y-cab{background:transparent;color:var(--navy);padding:22px 22px 10px 26px;border-bottom:1px solid rgba(12,30,51,.12);background:rgba(253,249,243,.94)}
+.a11y-cab h2{font-family:var(--f-t);font-size:1.6rem;color:var(--navy)}
+.a11y-cab h2:before{content:"";display:block;width:48px;height:3px;margin-bottom:10px;background:linear-gradient(90deg,var(--laranja),var(--rosa))}
+.a11y-fechar{background:#fff;border:1.5px solid var(--navy);color:var(--navy);border-radius:99px;padding:6px 13px;font-weight:700}
+.a11y-fechar:hover{background:var(--navy);color:#fff}
+.a11y-fechar:focus-visible{outline-color:var(--laranja-txt)}
+.a11y-corpo{padding:18px 22px 26px 26px;gap:16px}
+.a11y-sub{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--laranja-txt)}
+.a11y-op{background:rgba(255,255,255,.85);color:var(--navy);border:1px solid rgba(12,30,51,.16);border-radius:14px;padding:11px 13px;font-weight:600}
+.a11y-op:hover{border-color:var(--navy)}
+.a11y-tamanho .a11y-op span{font-family:var(--f-t)}
+.a11y-nivel{font-family:var(--f-t);font-size:1.3rem;color:var(--navy)}
+.a11y-chave{background:#E6DACA}
+.a11y-liga[aria-pressed="true"]{border-color:var(--navy);background:#fff;box-shadow:inset 4px 0 0 var(--rosa)}
+.a11y-liga[aria-pressed="true"] .a11y-chave{background:linear-gradient(90deg,var(--laranja),var(--rosa))}
+.a11y-restaurar{justify-content:center;background:var(--navy);color:#fff;border:0;border-radius:99px;box-shadow:inset 0 -4px 0 var(--rosa);padding:12px}
+.a11y-restaurar:hover{background:var(--navy2)}
+.a11y-nota{font-size:.82rem;color:var(--navy);opacity:.8}
+@media (max-width:640px){.a11y-painel{width:100vw;border-top:0}}
