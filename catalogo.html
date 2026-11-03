@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Catálogo · Atlas Austral</title>
+<meta name="description" content="Todas as produções do Atlas Austral: painéis, mapas e bases de dados, com ficha técnica, fontes, licença e, quando aplicável, como citar.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/atlas.css">
+<link rel="stylesheet" href="assets/css/acessibilidade.css">
+<link rel="stylesheet" href="assets/css/acessibilidade-atlas.css">
+<link rel="stylesheet" href="assets/css/modos.css">
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/i18n-en.js"></script>
+<script src="assets/js/comum.js"></script>
+<script src="assets/js/acessibilidade.js"></script>
+<script src="assets/js/produtos.js" defer></script>
+</head>
+<body class="pg">
+<!-- cabecalho -->
+<a class="pular" href="#conteudo" data-t>Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="index.html"><img class="logo logo-claro" src="assets/img/logos/atlas-austral.svg" width="185" height="44" alt="Atlas Austral: página inicial" data-t-attr="alt"><img class="logo logo-escuro" src="assets/img/logos/atlas-austral-escuro.svg" width="185" height="44" alt="Atlas Austral: página inicial" data-t-attr="alt"></a>
+    <nav class="nav" id="menu" aria-label="Menu principal" data-t-attr="aria-label"><a href="index.html" data-t>Início</a><a href="catalogo.html" aria-current="page" data-t>Catálogo</a><a href="publicacoes.html" data-t>Publicações</a><a href="consultoria.html" data-t>Consultoria</a><a href="sobre-o-atlas.html" data-t>Sobre o Atlas</a><a href="sobre-mim.html" data-t>Sobre mim</a></nav>
+    <div class="icones">
+      <a class="ic busca-ic" href="catalogo.html#busca" title="Buscar no catálogo" aria-label="Buscar no catálogo" data-t-attr="title,aria-label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      <button type="button" class="lang" id="btn-idioma"><span class="on">PT</span><span>EN</span></button>
+      <button type="button" class="ic mob" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<!-- /cabecalho -->
+<section class="cab8">
+  <div class="wrap">
+    <nav class="trilha" aria-label="Você está em"><a href="index.html">Início</a> / Catálogo</nav>
+    <span class="filete"></span>
+    <h1>Catálogo</h1>
+    <p class="sub">Todas as produções do Atlas Austral: painéis, mapas e bases de dados, com ficha técnica, fontes, licença e, quando aplicável, como citar.</p>
+    <form class="busca" id="form-busca" role="search" action="catalogo.html" method="get"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><label class="sr-only" for="busca">Buscar no catálogo</label><input id="busca" name="q" type="search" placeholder="Busque por tema, território ou palavra-chave" autocomplete="off"><button class="btn-busca" type="submit">Buscar →</button></form>
+  </div>
+</section>
+
+<main id="conteudo" class="wrap">
+  <div class="filtros" id="filtros"></div>
+  <p class="contagem" id="contagem" aria-live="polite"></p>
+  <div class="capas" id="capas-cat"></div>
+  <div class="sec-tit"><h2>Em breve</h2><a href="sobre-o-atlas.html#em-breve">Por que “em breve”? →</a></div>
+  <div class="breve-cards" id="breve-cards"></div>
+  <p class="nota">Estes mapas fazem parte de trabalhos em avaliação às cegas. Título e conteúdo aparecem depois do resultado.</p>
+  <noscript><p class="nota">O catálogo precisa de JavaScript para listar os produtos.</p></noscript>
+</main>
+
+<!-- rodape -->
+<footer>
+  <div class="cartao-logos">
+    <img src="assets/img/logos/ppdru.png" width="153" height="62" alt="PPDRU: Programa de Pós-Graduação em Desenvolvimento Regional e Urbano" data-t-attr="alt">
+    <img src="assets/img/logos/unifacs.png" width="282" height="62" alt="UNIFACS: Universidade Salvador">
+    <img class="anima" src="assets/img/logos/anima.png" width="113" height="84" alt="Ânima Educação">
+    <img class="capes" src="assets/img/logos/capes.png" width="384" height="70" alt="CAPES: Coordenação de Aperfeiçoamento de Pessoal de Nível Superior" data-t-attr="alt">
+  </div>
+  <nav class="links-rod wrap" aria-label="Links do rodapé" data-t-attr="aria-label">
+    <img class="logo logo-claro" src="assets/img/logos/atlas-austral.svg" width="193" height="46" alt="Atlas Austral"><img class="logo logo-escuro" src="assets/img/logos/atlas-austral-escuro.svg" width="193" height="46" alt="Atlas Austral">
+    <a href="sobre-o-atlas.html" data-t>Sobre o Atlas</a>
+    <a href="consultoria.html" data-t>Consultoria</a>
+    <a href="sobre-o-atlas.html#acessibilidade" data-t>Acessibilidade e privacidade</a>
+    <a href="sobre-o-atlas.html#citar" data-t>Como citar</a>
+    <em data-t>Cartografias de uma Internacionalista do Sul.</em>
+  </nav>
+  <div class="base wrap">
+    <span><span data-t>Mapas e dados: CC BY-NC 4.0 · Código: MIT</span> · <span data-t>Silhueta do Farol da Barra baseada em foto de <a href="https://commons.wikimedia.org/wiki/File:-2015-08-09-_Salvador_54_Romerito_Pontes_(20267312938).jpg">Romerito Pontes</a> (Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0/deed.pt-br">CC BY 2.0</a>)</span> · <span data-t>Sem cookies e sem rastreamento</span></span>
+    <span>© 2026 Bianca Chagas · Atlas Austral</span>
+  </div>
+</footer>
+<!-- /rodape -->
+</body>
+</html>

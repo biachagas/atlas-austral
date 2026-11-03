@@ -1,0 +1,64 @@
+{
+  "id": "p00-comex-bahia",
+  "tipo": "painel",
+  "recorte": "Bahia",
+  "ano": 2026,
+  "status": "publicado",
+  "titulo": {"pt": "Comércio Exterior da Bahia", "en": "Bahia Foreign Trade"},
+  "titulo_alternativo": "Bahia Foreign Trade",
+  "local": {"pt": "Bahia", "en": "Bahia"},
+  "selos": ["2026", "PT | EN"],
+  "resumo": {
+    "pt": "Reúne, em mapas e gráficos, as exportações e importações da Bahia de 1997 a setembro de 2026, segundo três leituras: <b>Municípios</b> (onde estão as empresas), <b>Escoamento</b> (por onde a mercadoria sai ou entra) e <b>Segmentos</b> (o que é comercializado).",
+    "en": "Brings together, in maps and charts, the exports and imports of the state of Bahia (Brazil) from 1997 to September 2026, through three lenses: <b>Municipalities</b> (where the companies are), <b>Shipping routes</b> (where goods leave or enter the country) and <b>Segments</b> (what is traded)."
+  },
+  "imagem": {
+    "arquivo": "assets/img/produtos/p00-comex-bahia.jpg",
+    "alt": {
+      "pt": "Recorte da página Municípios do painel: mapa da Bahia com os 417 municípios coloridos em tons de laranja, do mais claro ao mais escuro conforme o valor do comércio exterior em 2025 (US$ FOB); municípios sem valor aparecem em branco. Os tons mais escuros concentram-se no oeste do estado e no litoral próximo a Salvador.",
+      "en": "Detail of the dashboard's Municipalities page: map of Bahia with its 417 municipalities shaded in orange tones, from lightest to darkest by foreign trade value in 2025 (US$ FOB); municipalities with no value are white. The darkest tones are concentrated in the west of the state and on the coast near Salvador."
+    },
+    "legenda": {"pt": "Página Municípios do painel", "en": "Municipalities page of the dashboard"},
+    "link": {"url": "https://biachagas.github.io/comex-bahia-atlas-austral/", "rotulo": {"pt": "Abrir ↗", "en": "Open ↗"}}
+  },
+  "botoes": [
+    {"url": "https://biachagas.github.io/comex-bahia-atlas-austral/", "rotulo": {"pt": "Abrir o painel", "en": "Open the dashboard"}},
+    {"url": "https://github.com/biachagas/comex-bahia-atlas-austral", "rotulo": {"pt": "Ver repositório no GitHub", "en": "View repository on GitHub"}, "secundario": true}
+  ],
+  "ficha": [
+    {"campo": "Tipo", "valor": {"pt": "Painel interativo em quatro páginas: Municípios, Escoamento, Segmentos e Metodologia e Créditos", "en": "Interactive dashboard in four pages: Municipalities, Shipping routes, Segments, and Methodology and Credits"}},
+    {"campo": "Idiomas", "valor": {"pt": "Português e inglês (PT | EN)", "en": "Portuguese and English (PT | EN)"}},
+    {"campo": "Recorte territorial", "valor": {"pt": "Bahia, Brasil · 417 municípios", "en": "Bahia, Brazil · 417 municipalities"}},
+    {"campo": "Período dos dados", "valor": {"pt": "1997 a setembro de 2026 (2026 parcial, jan–set)", "en": "1997 to September 2026 (2026 partial, Jan–Sep)"}},
+    {"campo": "Fontes", "valor": {"pt": "Comex Stat (MDIC/SECEX); IBGE (Malha Municipal Digital 2025, UF 2025, Sistema Costeiro-Marinho 2024); DNIT/VGEO, ANAC, ANTAQ e SNV (infraestrutura); planilha de conectividade disponibilizada pela Usuport em 30/10/2026 (complementar)", "en": "Comex Stat (MDIC/SECEX); IBGE (Digital Municipal Grid 2025, States 2025, Coastal-Marine System 2024); DNIT/VGEO, ANAC, ANTAQ and SNV (infrastructure); connectivity spreadsheet provided by Usuport on 30 October 2026 (supplementary)"}},
+    {"campo": "Tratamento", "valor": {"pt": "Power Query (Power BI) e script em Python, com conferência automática de números", "en": "Power Query (Power BI) and a Python script, with automatic number checks"}},
+    {"campo": "Mapas de fundo", "valor": {"pt": "CARTO Positron (© OpenStreetMap contributors, © CARTO); Sentinel-2 cloudless by EOX IT Services GmbH (CC BY-NC-SA 4.0)", "en": "CARTO Positron (© OpenStreetMap contributors, © CARTO); Sentinel-2 cloudless by EOX IT Services GmbH (CC BY-NC-SA 4.0)"}},
+    {"campo": "Software", "valor": {"pt": "D3.js 7.9 (ISC) e d3-sankey 0.12 (BSD-3); site estático, sem cookies", "en": "D3.js 7.9 (ISC) and d3-sankey 0.12 (BSD-3); static site, no cookies"}},
+    {"campo": "Vínculo", "valor": "PPDRU/UNIFACS"},
+    {"campo": "Financiamento", "valor": {"pt": "CAPES – Código de Financiamento 001", "en": "CAPES – Financing Code 001"}},
+    {"campo": "Licença", "valor": {"pt": "Código: <a href=\"https://opensource.org/license/mit\">MIT</a> · Dados tratados e visualizações: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br\">CC BY-NC 4.0</a>. Dados de terceiros mantêm as licenças de origem; a planilha de conectividade da Usuport não está incluída nessas licenças", "en": "Code: <a href=\"https://opensource.org/license/mit\">MIT</a> · Processed data and visualizations: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC 4.0</a>. Third-party data keep their original licenses; the Usuport connectivity spreadsheet is not covered by these licenses"}},
+    {"campo": "Histórico", "valor": {"pt": "Tratamento dos dados iniciado em 23/10/2026; arquivos gerados em 28/10/2026 e revisados para a publicação do painel; dados até setembro de 2026", "en": "Data processing started on 23 October 2026; files generated on 28 October 2026 and reviewed for the dashboard's release; data through September 2026"}},
+    {"campo": "Publicado em", "valor": {"pt": "01/11/2026", "en": "1 November 2026"}}
+  ],
+  "citar": {
+    "abnt": "CHAGAS, Bianca Glória França de Oliveira; OLIVEIRA, Henrique Campos de. <i>Comércio Exterior da Bahia – Atlas Austral</i>. Salvador: PPDRU/UNIFACS, 2026. Disponível em: https://biachagas.github.io/comex-bahia-atlas-austral/. Acesso em: [data].",
+    "apa": "Chagas, B. G. F. de O., &amp; Oliveira, H. C. de. (2026). <i>Comércio Exterior da Bahia – Atlas Austral</i> [Painel interativo]. PPDRU/UNIFACS. https://biachagas.github.io/comex-bahia-atlas-austral/",
+    "iso": "CHAGAS, Bianca Glória França de Oliveira e OLIVEIRA, Henrique Campos de. <i>Comércio Exterior da Bahia – Atlas Austral</i> [em linha]. Salvador: PPDRU/UNIFACS, 2026 [consult. [data]]. Disponível em: https://biachagas.github.io/comex-bahia-atlas-austral/"
+  },
+  "creditos": [
+    {"papel": {"pt": "Elaboração: tratamento dos dados, cartografia e desenvolvimento do painel", "en": "Data processing, cartography and dashboard development"}, "nome": "Bianca Glória França de Oliveira Chagas", "orcid": "0009-0009-4859-8666", "lattes": "6882612035536485", "linkedin": "https://www.linkedin.com/in/biancagfochagas/"},
+    {"papel": {"pt": "Idealização e orientação", "en": "Conception and supervision"}, "nome": "Prof. Dr. Henrique Campos de Oliveira", "orcid": "0000-0002-0953-7731", "lattes": "8801706927407720"},
+    {"papel": {"pt": "Dados complementares", "en": "Supplementary data"}, "nome": "Usuport", "nota": {"pt": "Planilha de conectividade (rodovias e desembaraço aduaneiro), disponibilizada em 30/10/2026.", "en": "Connectivity spreadsheet (highways and customs clearance), provided on 30 October 2026."}}
+  ],
+  "apoio": {"pt": "O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – Brasil (CAPES) – Código de Financiamento 001.", "en": "This work was carried out with the support of the Coordination for the Improvement of Higher Education Personnel – Brazil (CAPES) – Financing Code 001."},
+  "publicacoes": [],
+  "mapa": {
+    "lon": -41.7, "lat": -12.5,
+    "nota": "ponto simbólico no centro aproximado da Bahia: o painel cobre o estado inteiro",
+    "cor": "rosa",
+    "rotulo": {"pt": "Comércio Exterior da Bahia", "en": "Bahia Foreign Trade"},
+    "detalhe": {"pt": "Painel interativo · 2026", "en": "Interactive dashboard · 2026"},
+    "posicao_rotulo": [26, 40]
+  },
+  "palavras_chave": "comex exportação importação comércio exterior bahia municípios portos escoamento segmentos painel dashboard trade exports imports"
+}
