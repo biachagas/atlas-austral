@@ -1,0 +1,22 @@
+# Conferência automática: roda a cada envio para o GitHub.
+# Se der erro, aparece um X vermelho no commit e o GitHub manda e-mail para a autora.
+name: Conferência dos dados e privacidade
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Arquivos de dados (vírgulas, aspas, campos obrigatórios)
+        run: python3 ferramentas/confere-dados.py
+      - name: Privacidade (e-mails, links de sessão, CPF, telefone, chaves)
+        if: always()
+        run: python3 ferramentas/varredura-privacidade.py

@@ -46,5 +46,8 @@ Apague o item correspondente em `dados/em-breve.json`. Enquanto o trabalho estiv
 ## 5. Salvar
 Clique em **Commit changes**. Em um ou dois minutos o site atualiza. Se o catálogo ficar vazio, quase sempre é uma vírgula ou aspas faltando no arquivo: o site https://jsonlint.com mostra onde está o erro.
 
+## 6. Conferência automática
+A cada commit, o GitHub confere sozinho os arquivos de dados e a privacidade (arquivo `.github/workflows/conferencia.yml`). Em um ou dois minutos aparece, ao lado do commit, um **✓ verde** (tudo certo) ou um **✗ vermelho** (problema). No caso do ✗, chega um e-mail do GitHub ("Run failed"). Para ver o problema, abra a aba **Actions** do repositório, clique na execução com ✗ e depois em **conferir**: a mensagem diz o arquivo, a linha e o que corrigir (por exemplo, vírgula faltando, citação ABNT/APA/ISO ou texto alternativo ausente, imagem com nome errado, título no "em breve"). Corrija e faça um novo commit.
+
 ## Textos fixos das páginas
 Os textos das páginas estão nos arquivos `.html`, em português. A tradução para o inglês fica em `assets/js/i18n-en.js`: se mudar um texto em português, mude a chave correspondente lá também.
