@@ -55,7 +55,7 @@
     svg += `<g class="rosa-v" transform="translate(${W - 20},${H - 190})"><image href="assets/img/logos/simbolo-cor.svg" x="-44" y="-44" width="88" height="88"/><text x="0" y="-52" text-anchor="middle">N</text></g>
       <g class="escala" transform="translate(${sx},${sy})"><path d="M0,0H${u.toFixed(1)}M0,-5V5M${(u / 2).toFixed(1)},-5V5M${u.toFixed(1)},-5V5"/>
         <text x="0" y="-9">0</text><text x="${(u / 2).toFixed(1)}" y="-9" text-anchor="middle">${fmt(km / 2)}</text><text x="${u.toFixed(1)}" y="-9" text-anchor="middle">${fmt(km)} km</text>
-        <text class="proj" x="${(u - 330).toFixed(1)}" y="20">${esc(projTxt)}</text><text class="proj" x="${(u - 330).toFixed(1)}" y="34">${esc(A.t("Base: Natural Earth (domínio público)"))}</text></g></svg>`;
+        <text class="proj" x="${(u - 330).toFixed(1)}" y="20">${esc(projTxt)}</text></g></svg>`;
 
     let html = svg;
     pontos.forEach(({ p }) => {
