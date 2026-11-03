@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Catálogo · Atlas Austral</title>
+<meta name="description" content="Todas as produções do Atlas Austral: painéis, mapas e bases de dados, com ficha técnica, fontes, licença e, quando aplicável, como citar.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/atlas.css">
+<link rel="stylesheet" href="assets/css/acessibilidade.css">
+<link rel="stylesheet" href="assets/css/acessibilidade-atlas.css">
+<link rel="stylesheet" href="assets/css/modos.css">
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/i18n-en.js"></script>
+<script src="assets/js/comum.js"></script>
+<script src="assets/js/acessibilidade.js"></script>
+<script src="assets/js/produtos.js" defer></script>
+</head>
+<body class="pg">
+<!-- cabecalho -->
+<!-- /cabecalho -->
+<section class="cab8">
+  <div class="wrap">
+    <nav class="trilha" aria-label="Você está em"><a href="index.html">Início</a> / Catálogo</nav>
+    <span class="filete"></span>
+    <h1>Catálogo</h1>
+    <p class="sub">Todas as produções do Atlas Austral: painéis, mapas e bases de dados, com ficha técnica, fontes, licença e, quando aplicável, como citar.</p>
+    <form class="busca" id="form-busca" role="search" action="catalogo.html" method="get"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><label class="sr-only" for="busca">Buscar no catálogo</label><input id="busca" name="q" type="search" placeholder="Busque por tema, território ou palavra-chave" autocomplete="off"><button class="btn-busca" type="submit">Buscar →</button></form>
+  </div>
+</section>
+
+<main id="conteudo" class="wrap">
+  <div class="filtros" id="filtros"></div>
+  <p class="contagem" id="contagem" aria-live="polite"></p>
+  <div class="capas" id="capas-cat"></div>
+  <div class="sec-tit"><h2>Em breve</h2><a href="sobre-o-atlas.html#em-breve">Por que “em breve”? →</a></div>
+  <div class="breve-cards" id="breve-cards"></div>
+  <p class="nota">Estes mapas fazem parte de trabalhos em avaliação às cegas. Título e conteúdo aparecem depois do resultado.</p>
+  <noscript><p class="nota">O catálogo precisa de JavaScript para listar os produtos.</p></noscript>
+</main>
+
+<!-- rodape -->
+<!-- /rodape -->
+</body>
+</html>

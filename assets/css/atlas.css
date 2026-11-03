@@ -413,3 +413,6 @@ html .a11y-botao.btn[aria-expanded="true"]{background:var(--btn-fundo);color:var
 html.a11y-texto-grande .princ.d8,html.a11y-texto-grande .grade-eu,html.a11y-texto-grande .pessoas{grid-template-columns:1fr}
 html.a11y-texto-grande .sols{grid-template-columns:1fr 1fr}
 html.a11y-texto-grande .breve-cards{grid-template-columns:1fr 1fr}
+.sol h2,.sol h3{font-family:var(--f-t);font-size:1.0625rem;line-height:1.25;margin-top:6px}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.busca input::-webkit-search-cancel-button{cursor:pointer}

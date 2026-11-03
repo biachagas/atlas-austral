@@ -1,0 +1,7 @@
+{
+  "_leia": "Lista dos produtos publicados no Atlas, na ordem em que aparecem (do mais recente para o mais antigo). Para acrescentar um produto: crie o arquivo dele em dados/produtos/ e acrescente o nome aqui. Instruções em COMO-ACRESCENTAR-UM-PRODUTO.md.",
+  "produtos": [
+    "p00-comex-bahia",
+    "p06-matatu"
+  ]
+}

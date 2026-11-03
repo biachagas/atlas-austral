@@ -1,8 +1,7 @@
 /* Atlas Austral · funções comuns a todas as páginas
    - idioma PT | EN pelo endereço (?lang=en), no mesmo esquema do painel (i18n.js + i18n-en.js);
-   - tradução dos textos marcados no HTML:
-       data-t            → troca o conteúdo do elemento (a chave é o texto em português, como está no HTML)
-       data-t-attr="alt,title,aria-label,placeholder,content" → troca esses atributos
+   - tradução automática do HTML: todo texto (ou elemento com <b>, <i>, <a> dentro) que estiver em i18n-en.js
+     é trocado, assim como os atributos alt, title, aria-label e placeholder; marque com data-sem-traducao o que não deve ser traduzido
    - links internos levam o ?lang=en adiante;
    - menu do celular (botão ☰);
    - botão de contato: o e-mail só é montado no clique (D30), não fica escrito no código.
@@ -34,14 +33,32 @@
     return semHash + sep + "lang=en" + (hash !== undefined ? "#" + hash : "");
   }
 
+  // Tradução automática: qualquer elemento cujo conteúdo (ou texto) seja uma chave do dicionário é trocado.
+  // Assim o HTML fica em português puro e o inglês vem só de i18n-en.js.
+  const PULAR = new Set(["SCRIPT", "STYLE", "SVG", "svg", "TEXTAREA", "CODE"]);
+  const ATRIBUTOS = ["alt", "title", "aria-label", "placeholder"];
+  function tem(k) { return Object.prototype.hasOwnProperty.call(window.I18N_EN || {}, k); }
   function traduzir(raiz) {
     if (lang !== "en") return;
-    raiz.querySelectorAll("[data-t]").forEach(el => { el.innerHTML = tr(el.innerHTML); });
-    raiz.querySelectorAll("[data-t-attr]").forEach(el => {
-      el.getAttribute("data-t-attr").split(",").map(a => a.trim()).forEach(a => {
-        if (el.hasAttribute(a)) el.setAttribute(a, tr(el.getAttribute(a)));
-      });
-    });
+    (function andar(el) {
+      for (const n of [...el.childNodes]) {
+        if (n.nodeType === 3) {
+          const k = norm(n.nodeValue);
+          if (k && tem(k)) n.nodeValue = n.nodeValue.replace(n.nodeValue.trim(), window.I18N_EN[k]);
+          else if (k && /[A-Za-zÀ-ú]{3}/.test(k) && el.closest && !el.closest("[data-sem-traducao]")) faltando.add(k);
+        } else if (n.nodeType === 1 && !PULAR.has(n.tagName) && !n.hasAttribute("data-sem-traducao")) {
+          ATRIBUTOS.forEach(a => { if (n.hasAttribute(a)) { const k = norm(n.getAttribute(a)); if (tem(k)) n.setAttribute(a, window.I18N_EN[k]); } });
+          const k = norm(n.innerHTML);
+          if (n.children.length && tem(k)) { n.innerHTML = window.I18N_EN[k]; continue; }
+          andar(n);
+        }
+      }
+    })(raiz.body || raiz);
+    if (raiz === document) {
+      const k = norm(document.title); if (tem(k)) document.title = window.I18N_EN[k];
+      const m = document.querySelector('meta[name="description"]');
+      if (m && tem(norm(m.content))) m.content = window.I18N_EN[norm(m.content)];
+    }
   }
   function ajustarLinks(raiz) {
     raiz.querySelectorAll("a[href]").forEach(a => {

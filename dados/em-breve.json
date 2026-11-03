@@ -1,0 +1,10 @@
+{
+  "_leia": "Trabalhos em avaliação às cegas (D18, D38, D69): só tema genérico e região. NUNCA colocar título, evento, revista, autoria ou arquivo. Quando um trabalho for aceito, ele sai daqui e ganha um arquivo em dados/produtos/. 'ancora' é um ponto genérico da região (não é a localização do trabalho) e 'rotulo' é a posição da etiqueta sobre o mapa, em % da largura e da altura.",
+  "itens": [
+    {"regiao": {"pt": "América do Sul", "en": "South America"}, "tema": {"pt": "Geoeconomia", "en": "Geoeconomics"}, "ancora": [-63.0, -18.0], "rotulo": [6, 58]},
+    {"regiao": {"pt": "Brasil", "en": "Brazil"}, "tema": {"pt": "Turismo", "en": "Tourism"}, "ancora": [-50.0, -12.0], "rotulo": [24, 27]},
+    {"regiao": {"pt": "Bahia", "en": "Bahia"}, "tema": {"pt": "Energia e território", "en": "Energy and territory"}, "ancora": [-42.0, -10.5], "rotulo": [46, 15]},
+    {"regiao": {"pt": "Bahia", "en": "Bahia"}, "tema": {"pt": "Energia e rede urbana", "en": "Energy and urban network"}, "ancora": [-40.5, -11.5], "rotulo": [60, 20.5]},
+    {"regiao": {"pt": "Bahia", "en": "Bahia"}, "tema": {"pt": "Cadeias produtivas", "en": "Production chains"}, "ancora": [-40.0, -13.5], "rotulo": [68, 26]}
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "p06-matatu",
+  "tipo": "mapas",
+  "recorte": "Salvador",
+  "ano": 2026,
+  "status": "em andamento",
+  "titulo": {"pt": "Geoprocessamento e Socioeconomia do Bairro do Matatu", "en": "Geoprocessing and Socioeconomics of the Matatu Neighborhood"},
+  "local": {"pt": "Salvador (BA)", "en": "Salvador, Bahia"},
+  "selos": ["2026", "CC BY-NC 4.0"],
+  "doi": "10.5281/zenodo.20739055",
+  "aviso": {"pt": "Projeto em andamento: a série completa de mapas e as fichas técnicas serão disponibilizadas após o término do projeto.", "en": "Project in progress: the full map series and technical details will be released when the project is completed."},
+  "resumo": {
+    "pt": "Mapas temáticos produzidos a partir de estudo de geoprocessamento e análise socioeconômica do bairro do Matatu, em Salvador, no âmbito do Projeto Cidades Internas (PCI/UNIFACS).",
+    "en": "Thematic maps produced from a geoprocessing and socioeconomic study of the Matatu neighborhood in Salvador, within the Projeto Cidades Internas (PCI/UNIFACS)."
+  },
+  "imagem": {
+    "arquivo": "assets/img/produtos/p06-matatu-1.jpg",
+    "alt": {
+      "pt": "Mapa 1, delimitação do Bairro do Matatu: o bairro aparece em amarelo, cercado pelos bairros limítrofes em laranja (entre eles Barbalho, Macaúbas, Vila Laura, Luiz Anselmo, Cosme de Farias, Brotas, Nazaré e Santo Agostinho); os demais bairros de Salvador estão em branco e os outros municípios em cinza. Um mapa de localização mostra a posição da área no município. Inclui legenda, escala de 0 a 500 m, seta do norte e a projeção UTM, SIRGAS 2000 (EPSG 31984).",
+      "en": "Map 1, boundaries of the Matatu Neighborhood: the neighborhood is shown in yellow, surrounded by the bordering neighborhoods in orange (including Barbalho, Macaúbas, Vila Laura, Luiz Anselmo, Cosme de Farias, Brotas, Nazaré and Santo Agostinho); Salvador's other neighborhoods are white and other municipalities grey. A locator map shows where the area sits in the municipality. Includes legend, 0–500 m scale bar, north arrow and the UTM projection, SIRGAS 2000 (EPSG 31984)."
+    },
+    "legenda": {"pt": "Mapa 1 · Delimitação do Bairro do Matatu", "en": "Map 1 · Boundaries of the Matatu Neighborhood"},
+    "link": {"url": "assets/img/produtos/p06-matatu-1.jpg", "rotulo": {"pt": "Ampliar ⤢", "en": "Enlarge ⤢"}}
+  },
+  "botoes": [
+    {"url": "https://doi.org/10.5281/zenodo.20739055", "rotulo": {"pt": "Baixar mapas e dados (Zenodo)", "en": "Download maps and data (Zenodo)"}},
+    {"url": "https://github.com/biachagas/geoprocessamento-do-matatu", "rotulo": {"pt": "Ver repositório no GitHub", "en": "View repository on GitHub"}, "secundario": true}
+  ],
+  "ficha": [
+    {"campo": "Tipo", "valor": {"pt": "Série de mapas estáticos · 1 mapa disponível (série em andamento)", "en": "Static map series · 1 map available (series in progress)"}},
+    {"campo": "Recorte territorial", "valor": {"pt": "Bairro do Matatu, Salvador, Bahia, Brasil", "en": "Matatu Neighborhood, Salvador, Bahia, Brazil"}},
+    {"campo": "Período dos dados", "valor": {"pt": "Censo 2022 e dados de referência diversos", "en": "2022 Census and various reference data"}},
+    {"campo": "Fontes", "valor": {"pt": "IBGE (Censo 2022, setores censitários); © colaboradores do OpenStreetMap; demais fontes: <span class=\"pend\">pendente</span>", "en": "IBGE (2022 Census, census tracts); © OpenStreetMap contributors; other sources: <span class=\"pend\">pending</span>"}},
+    {"campo": "Software e referência", "valor": "QGIS 3.44 · SIRGAS 2000"},
+    {"campo": "Vínculo", "valor": "Projeto Cidades Internas (PCI), UNIFACS"},
+    {"campo": "Financiamento", "valor": {"pt": "CAPES – Código de Financiamento 001", "en": "CAPES – Financing Code 001"}},
+    {"campo": "Licença", "valor": {"pt": "<a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br\">CC BY-NC 4.0</a>", "en": "<a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC 4.0</a>"}},
+    {"campo": "Publicado em", "valor": {"pt": "17/06/2026", "en": "17 June 2026"}}
+  ],
+  "citar": {
+    "abnt": "CHAGAS, Bianca Glória França de Oliveira. <b>Geoprocessamento e Socioeconomia do Bairro do Matatu, Salvador-BA</b>. 2026. Série de mapas. DOI: 10.5281/zenodo.20739055.",
+    "apa": "Chagas, B. G. F. de O. (2026). <i>Geoprocessamento e Socioeconomia do Bairro do Matatu, Salvador-BA</i> [Série de mapas]. https://doi.org/10.5281/zenodo.20739055",
+    "iso": "CHAGAS, Bianca Glória França de Oliveira. <i>Geoprocessamento e Socioeconomia do Bairro do Matatu, Salvador-BA</i> [série de mapas]. 2026. DOI 10.5281/zenodo.20739055."
+  },
+  "creditos": [
+    {"papel": {"pt": "Elaboração cartográfica", "en": "Cartography"}, "nome": "Bianca Glória França de Oliveira Chagas", "orcid": "0009-0009-4859-8666", "lattes": "6882612035536485", "linkedin": "https://www.linkedin.com/in/biancagfochagas/"},
+    {"papel": {"pt": "Orientação", "en": "Supervision"}, "nome": "Renato Barbosa Reis", "orcid": "0000-0002-2045-112X", "lattes": "8140072430479193"},
+    {"papel": {"pt": "Orientação", "en": "Supervision"}, "nome": "Laumar Neves de Souza", "lattes": "5346746386335834"}
+  ],
+  "publicacoes": [],
+  "mapa": {
+    "lon": -38.5108, "lat": -12.9711,
+    "nota": "marco da cidade de Salvador (12°58′16″S · 38°30′39″O); nesta escala o bairro não se distingue",
+    "cor": "laranja",
+    "rotulo": {"pt": "Bairro do Matatu", "en": "Matatu Neighborhood"},
+    "detalhe": {"pt": "Série de mapas · Salvador", "en": "Map series · Salvador"},
+    "posicao_rotulo": [74, 45]
+  },
+  "palavras_chave": "matatu salvador bairro geoprocessamento socioeconomia censo setores censitários qgis pci cidades internas neighborhood"
+}
