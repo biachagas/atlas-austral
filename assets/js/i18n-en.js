@@ -254,5 +254,20 @@ window.I18N_EN = {
  "Página não encontrada · Atlas Austral": "Page not found · Atlas Austral",
  "O endereço pode ter mudado ou estar incompleto.": "The address may have changed or be incomplete.",
  "Voltar ao início": "Back to home",
- "Atlas Austral · Cartografias de uma Internacionalista do Sul": "Atlas Austral · Cartographies of an Internationalist from the South"
+ "Atlas Austral · Cartografias de uma Internacionalista do Sul": "Atlas Austral · Cartographies of an Internationalist from the South",
+
+ /* ---------- árvore de links ---------- */
+ "Links · Atlas Austral": "Links · Atlas Austral",
+ "Links": "Links",
+ "Bianca Chagas": "Bianca Chagas",
+ "Mapas, painéis interativos e bases de dados": "Maps, interactive dashboards and datasets",
+ "Painel interativo · 2026": "Interactive dashboard · 2026",
+ "Todos os mapas e painéis, com ficha técnica e como citar": "All maps and dashboards, with technical details and how to cite",
+ "Painéis, mapas temáticos, tratamento de dados e projetos em QGIS": "Dashboards, thematic maps, data processing and QGIS projects",
+ "ORCID": "ORCID",
+ "0009-0009-4859-8666": "0009-0009-4859-8666",
+ "E-mail": "Email",
+ "Atlas Austral": "Atlas Austral",
+ "Comércio Exterior da Bahia": "Bahia Foreign Trade",
+ "Links de Bianca Chagas: Atlas Austral, painel de Comércio Exterior da Bahia, Lattes, ORCID, LinkedIn e contato.": "Links from Bianca Chagas: Atlas Austral, Bahia Foreign Trade dashboard, Lattes, ORCID, LinkedIn and contact."
 };

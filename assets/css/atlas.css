@@ -416,3 +416,23 @@ html.a11y-texto-grande .breve-cards{grid-template-columns:1fr 1fr}
 .sol h2,.sol h3{font-family:var(--f-t);font-size:1.0625rem;line-height:1.25;margin-top:6px}
 .acoes{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
 .busca input::-webkit-search-cancel-button{cursor:pointer}
+
+/* ---------- árvore de links (links.html, D44: fora do menu, para Instagram e LinkedIn) ---------- */
+.pg-links{min-height:100vh;background:var(--img-curvas) center/cover,linear-gradient(160deg,#FDF9F3 0%,#F9E6D3 45%,rgba(242,105,31,.28) 75%,rgba(232,90,138,.45) 100%)}
+.arvore{max-width:520px;margin:0 auto;padding:18px 18px 40px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.arvore-topo{align-self:stretch;display:flex;justify-content:flex-end;gap:8px;margin-bottom:18px}
+.arvore .foto-rosa{width:160px;height:160px;margin-top:14px}
+.arvore h1{font-size:2rem;margin:18px 0 6px}
+.arvore-sub{margin:0;font-size:.95rem}
+.arvore-slogan{font-family:var(--f-t);font-style:italic;color:var(--link);margin:6px 0 24px}
+.arvore-lista{align-self:stretch;display:flex;flex-direction:column;gap:12px}
+.arvore-item{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 18px;border-radius:18px;background:var(--sup);border:1px solid var(--fio);color:var(--tx);text-decoration:none;box-shadow:0 6px 18px rgba(232,90,138,.12);transition:transform .15s}
+.arvore-item:hover{transform:translateY(-2px);border-color:var(--tx)}
+.arvore-item img,.arvore-item .ico-txt{width:30px;height:30px;flex:none;object-fit:contain;display:grid;place-items:center;font-size:1.2rem;color:var(--link)}
+.arvore-item b{display:block;font-family:var(--f-t);font-size:1.05rem}
+.arvore-item small{display:block;font-size:.82rem;opacity:.85}
+.arvore-item.destaque{background:var(--btn-fundo);color:var(--btn-tx);box-shadow:inset 0 -4px 0 var(--rosa),0 8px 22px rgba(12,30,51,.18)}
+.arvore-rodape{font-size:.8rem;margin-top:28px;opacity:.85}
+.a11y-escuro .pg-links{background:var(--fundo)}
+.a11y-escuro main a.arvore-item{color:var(--tx)}
+.a11y-escuro main a.arvore-item.destaque{color:var(--btn-tx)}
