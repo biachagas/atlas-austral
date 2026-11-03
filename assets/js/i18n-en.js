@@ -32,6 +32,7 @@ window.I18N_EN = {
  "Ver todo o catálogo →": "See the full catalog →",
  "Por que “em breve”? →": "Why “coming soon”? →",
  "Em breve": "Coming soon",
+ "Etiquetas verdes: em breve (trabalhos em avaliação)": "Green tags: coming soon (works under review)",
  "Em avaliação.": "Under review.",
  "em andamento": "in progress",
  "Painel interativo": "Interactive dashboard",

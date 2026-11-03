@@ -45,9 +45,9 @@
       <defs>${grad("poente")}</defs>
       <g class="grat">${base.graticula.map(d => `<path d="${d}"/>`).join("")}${base.rotulos_graticula.map(t => `<text x="${t.x}" y="${t.y}">${esc(A.lang === "en" ? t.texto.replace("O", "W") : t.texto)}</text>`).join("")}</g>
       ${base.feicoes.map(f => `<path class="${f.classe}" d="${f.d}"/>`).join("")}`;
-    breve.forEach(({ b, xy }) => {
+    breve.forEach(({ b, xy }, i) => {
       const [lx, ly] = doPct([b.rotulo[0] + 8, b.rotulo[1] + 2.4]);
-      svg += `<line class="lider" x1="${xy[0].toFixed(1)}" y1="${xy[1].toFixed(1)}" x2="${lx.toFixed(1)}" y2="${ly.toFixed(1)}"/><circle class="anc" cx="${xy[0].toFixed(1)}" cy="${xy[1].toFixed(1)}" r="3"/>`;
+      svg += `<line class="lider" data-i="${i}" x1="${xy[0].toFixed(1)}" y1="${xy[1].toFixed(1)}" x2="${lx.toFixed(1)}" y2="${ly.toFixed(1)}"/><circle class="anc" cx="${xy[0].toFixed(1)}" cy="${xy[1].toFixed(1)}" r="3"/>`;
     });
     pontos.forEach(({ p, xy }) => {
       svg += `<circle class="pt${p.mapa.cor === "laranja" ? " sal" : ""}" cx="${xy[0].toFixed(1)}" cy="${xy[1].toFixed(1)}" r="${p.mapa.cor === "laranja" ? 6.5 : 8}"/>`;
@@ -62,12 +62,59 @@
       const [x, y] = p.mapa.posicao_rotulo;
       html += `<a class="rot" href="${A.link("produto.html?id=" + encodeURIComponent(p.id))}" style="left:${x}%;top:${y}%"${p.mapa.cor === "laranja" ? ' data-cor="laranja"' : ""}>${esc(L(p.mapa.rotulo))}<small>${esc(L(p.mapa.detalhe))}</small></a>`;
     });
-    breve.forEach(({ b }) => {
-      html += `<a class="rot rbreve" href="${A.link("sobre-o-atlas.html#em-breve")}" style="left:${b.rotulo[0]}%;top:${b.rotulo[1]}%">${esc(A.t("Em breve"))} · ${esc(L(b.tema))}</a>`;
+    breve.forEach(({ b }, i) => {
+      html += `<a class="rot rbreve" data-i="${i}" href="${A.link("sobre-o-atlas.html#em-breve")}" style="left:${b.rotulo[0]}%;top:${b.rotulo[1]}%"><span class="eb-pre">${esc(A.t("Em breve"))} · </span>${esc(L(b.tema))}</a>`;
     });
+    html += `<p class="leg-eb"><span aria-hidden="true">▭</span> ${esc(A.t("Etiquetas verdes: em breve (trabalhos em avaliação)"))}</p>`;
     html += `<p class="leg-m">${pontos.map(({ p }) => `<span class="${p.mapa.cor === "laranja" ? "o" : ""}" aria-hidden="true">●</span> ${esc(L(p.mapa.rotulo))}`).join(" · ")}</p>`;
     caixa.innerHTML = html;
+    ajustarRotulos(caixa, vb);
+    let espera;
+    const reajustar = () => { clearTimeout(espera); espera = setTimeout(() => ajustarRotulos(caixa, vb), 60); };
+    window.addEventListener("resize", reajustar);
+    if (window.ResizeObserver) new ResizeObserver(reajustar).observe(caixa); // também quando o menu de acessibilidade muda o tamanho do texto
     minimapas(base);
+  }
+
+  // Mantém cada rótulo inteiro dentro da tela (tablet e celular) e liga a linha tracejada
+  // do "em breve" ao centro do rótulo, na posição em que ele realmente ficou.
+  function ajustarRotulos(caixa, vb) {
+    const svgEl = caixa.querySelector(".mapa-svg");
+    if (!svgEl) return;
+    const folga = 6, larguraTela = document.documentElement.clientWidth;
+    caixa.querySelectorAll(".rot").forEach(r => {
+      r.style.marginLeft = "";
+      const b = r.getBoundingClientRect();
+      let dx = 0;
+      if (b.right > larguraTela - folga) dx = larguraTela - folga - b.right;
+      if (b.left + dx < folga) dx = folga - b.left;
+      if (dx) r.style.marginLeft = dx.toFixed(1) + "px";
+    });
+    // Rótulos que se encostam (telas estreitas): o de baixo desce até ficar livre
+    const rots = [...caixa.querySelectorAll(".rot")];
+    rots.forEach(r => { r.style.marginTop = ""; });
+    const postos = [];
+    rots.map(r => ({ r, b: r.getBoundingClientRect() })).sort((a, c) => a.b.top - c.b.top).forEach(({ r, b }) => {
+      let top = b.top, mexeu = true, voltas = 0;
+      while (mexeu && voltas++ < 10) {
+        mexeu = false;
+        for (const o of postos) {
+          if (b.left < o.right + 3 && b.right > o.left - 3 && top < o.bottom + 3 && top + b.height > o.top - 3) { top = o.bottom + 4; mexeu = true; }
+        }
+      }
+      if (top !== b.top) r.style.marginTop = (top - b.top).toFixed(1) + "px";
+      postos.push({ left: b.left, right: b.right, top, bottom: top + b.height });
+    });
+    const s = svgEl.getBoundingClientRect();
+    if (!s.width) return;
+    const k = vb[2] / s.width;
+    caixa.querySelectorAll(".rot.rbreve").forEach(r => {
+      const linha = svgEl.querySelector(`.lider[data-i="${r.dataset.i}"]`);
+      if (!linha) return;
+      const b = r.getBoundingClientRect();
+      linha.setAttribute("x2", (vb[0] + (b.left + b.width / 2 - s.left) * k).toFixed(1));
+      linha.setAttribute("y2", (vb[1] + (b.top + b.height / 2 - s.top) * k).toFixed(1));
+    });
   }
 
   function mapaDescricao(d) {
