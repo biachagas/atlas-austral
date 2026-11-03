@@ -185,6 +185,8 @@ footer .base a{color:var(--tx)}
 .rot small{display:block;font-weight:400;font-size:0.75rem}
 .rot.rbreve{background:rgba(253,249,243,.92);border:1.5px solid rgba(31,111,106,.55);color:var(--verde-txt);box-shadow:none;font-size:0.7812rem}
 .leg-m{display:none;font-size:0.8125rem;margin:4px 0 0}
+.leg-eb{display:none;font-size:0.75rem;margin:2px 0 0;color:var(--verde-txt)}
+@media (max-width:480px){.rot .eb-pre{display:none}.leg-eb{display:block}}
 .leg-m span{color:var(--rosa)}
 .leg-m .o{color:var(--laranja-txt)}
 .faixa-ssa{position:relative;z-index:1}
@@ -335,6 +337,10 @@ footer .base a{color:var(--tx)}
   .hero>.wrap{grid-template-columns:minmax(0,1fr)}
   .hero h1{font-size:2.75rem}
   .mapa-box{width:min(100%,600px);margin:0 auto}
+  /* tablet: rótulos um pouco menores para caberem na tela */
+  .rot{font-size:0.75rem;padding:6px 10px}
+  .rot small{font-size:0.6875rem}
+  .rot.rbreve{font-size:0.72rem;padding:5px 9px}
   .hero:after{-webkit-mask:none;mask:none;opacity:.35}
   .grade-rec{grid-template-columns:1fr 1fr}
   .capas{grid-template-columns:1fr}
@@ -367,9 +373,10 @@ footer .base a{color:var(--tx)}
   .busca-ic{display:none}
   .hero h1{font-size:2.375rem}
   .hero .sub{font-size:1.125rem}
-  .rot{display:none}
-  .leg-m{display:block}
-  .mapa-svg .lider,.mapa-svg .anc{display:none}
+  /* celular: rótulos e linhas do mapa continuam, em versão compacta (posição ajustada em mapa-topo.js) */
+  .rot{font-size:0.6875rem;padding:4px 8px;border-radius:9px;border-left-width:3px}
+  .rot small{font-size:0.625rem}
+  .rot.rbreve{font-size:0.65rem;padding:3px 7px}
   .busca input{font-size:0.875rem}
   .btn-busca{padding:9px 14px}
   .faixa-sobre .wrap{grid-template-columns:1fr}
