@@ -35,7 +35,7 @@
 
   // Tradução automática: qualquer elemento cujo conteúdo (ou texto) seja uma chave do dicionário é trocado.
   // Assim o HTML fica em português puro e o inglês vem só de i18n-en.js.
-  const PULAR = new Set(["SCRIPT", "STYLE", "SVG", "svg", "TEXTAREA", "CODE"]);
+  const PULAR = new Set(["SCRIPT", "STYLE", "SVG", "svg", "TEXTAREA", "CODE", "NOSCRIPT"]);
   const ATRIBUTOS = ["alt", "title", "aria-label", "placeholder"];
   function tem(k) { return Object.prototype.hasOwnProperty.call(window.I18N_EN || {}, k); }
   function traduzir(raiz) {
