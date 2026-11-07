@@ -38,7 +38,7 @@
     {"campo": "Financiamento", "valor": {"pt": "CAPES – Código de Financiamento 001", "en": "CAPES – Financing Code 001"}},
     {"campo": "Licença", "valor": {"pt": "Código: <a href=\"https://opensource.org/license/mit\">MIT</a> · Dados tratados e visualizações: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br\">CC BY-NC 4.0</a>. Dados de terceiros mantêm as licenças de origem; a planilha de conectividade da Usuport não está incluída nessas licenças", "en": "Code: <a href=\"https://opensource.org/license/mit\">MIT</a> · Processed data and visualizations: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC 4.0</a>. Third-party data keep their original licenses; the Usuport connectivity spreadsheet is not covered by these licenses"}},
     {"campo": "Histórico", "valor": {"pt": "Tratamento dos dados iniciado em 23/10/2026; arquivos gerados em 28/10/2026 e revisados para a publicação do painel; dados até setembro de 2026", "en": "Data processing started on 23 October 2026; files generated on 28 October 2026 and reviewed for the dashboard's release; data through September 2026"}},
-    {"campo": "Publicado em", "valor": {"pt": "01/11/2026", "en": "1 November 2026"}}
+    {"campo": "Publicado em", "valor": {"pt": "Versão preliminar publicada em 01/11/2026; lançamento oficial previsto para abril de 2027", "en": "Preliminary version published on 1 November 2026; official launch planned for April 2027"}}
   ],
   "citar": {
     "abnt": "CHAGAS, Bianca Glória França de Oliveira; OLIVEIRA, Henrique Campos de. <i>Comércio Exterior da Bahia – Atlas Austral</i>. Salvador: PPDRU/UNIFACS, 2026. Disponível em: https://biachagas.github.io/comex-bahia-atlas-austral/. Acesso em: [data].",
