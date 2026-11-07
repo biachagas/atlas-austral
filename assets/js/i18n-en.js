@@ -173,6 +173,7 @@ window.I18N_EN = {
  "Mapas de fundo": "Basemaps",
  "Software": "Software",
  "Software e referência": "Software and reference system",
+ "Projeto": "Project",
  "Vínculo": "Affiliation",
  "Financiamento": "Funding",
  "Licença": "License",
