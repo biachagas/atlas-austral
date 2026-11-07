@@ -263,6 +263,8 @@ window.I18N_EN = {
  "Bianca Chagas": "Bianca Chagas",
  "Mapas, painéis interativos e bases de dados": "Maps, interactive dashboards and datasets",
  "Painel interativo · 2026": "Interactive dashboard · 2026",
+ "Lançamento: abr/2027": "Launch: Apr 2027",
+ "Painel interativo · lançamento em abril de 2027": "Interactive dashboard · launching in April 2027",
  "Todos os mapas e painéis, com ficha técnica e como citar": "All maps and dashboards, with technical details and how to cite",
  "Painéis, mapas temáticos, tratamento de dados e projetos em QGIS": "Dashboards, thematic maps, data processing and QGIS projects",
  "ORCID": "ORCID",
