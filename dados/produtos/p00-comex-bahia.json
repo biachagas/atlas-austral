@@ -3,11 +3,12 @@
   "tipo": "painel",
   "recorte": "Bahia",
   "ano": 2026,
-  "status": "publicado",
+  "status": "em andamento",
   "titulo": {"pt": "Comércio Exterior da Bahia", "en": "Bahia Foreign Trade"},
   "titulo_alternativo": "Bahia Foreign Trade",
   "local": {"pt": "Bahia", "en": "Bahia"},
-  "selos": ["2026", "PT | EN"],
+  "selos": ["2026", "Lançamento: abr/2027", "PT | EN"],
+  "aviso": {"pt": "Painel em ajustes finais. O lançamento está previsto para abril de 2027.", "en": "Dashboard in final adjustments. Launch is planned for April 2027."},
   "resumo": {
     "pt": "Reúne, em mapas e gráficos, as exportações e importações da Bahia de 1997 a setembro de 2026, segundo três leituras: <b>Municípios</b> (onde estão as empresas), <b>Escoamento</b> (por onde a mercadoria sai ou entra) e <b>Segmentos</b> (o que é comercializado).",
     "en": "Brings together, in maps and charts, the exports and imports of the state of Bahia (Brazil) from 1997 to September 2026, through three lenses: <b>Municipalities</b> (where the companies are), <b>Shipping routes</b> (where goods leave or enter the country) and <b>Segments</b> (what is traded)."
@@ -19,11 +20,10 @@
       "en": "Detail of the dashboard's Municipalities page: map of Bahia with its 417 municipalities shaded in orange tones, from lightest to darkest by foreign trade value in 2025 (US$ FOB); municipalities with no value are white. The darkest tones are concentrated in the west of the state and on the coast near Salvador."
     },
     "legenda": {"pt": "Página Municípios do painel", "en": "Municipalities page of the dashboard"},
-    "link": {"url": "https://biachagas.github.io/comex-bahia-atlas-austral/", "rotulo": {"pt": "Abrir ↗", "en": "Open ↗"}}
+    "link": {"url": "assets/img/produtos/p00-comex-bahia.jpg", "rotulo": {"pt": "Ampliar ⤢", "en": "Enlarge ⤢"}}
   },
   "botoes": [
-    {"url": "https://biachagas.github.io/comex-bahia-atlas-austral/", "rotulo": {"pt": "Abrir o painel", "en": "Open the dashboard"}},
-    {"url": "https://github.com/biachagas/comex-bahia-atlas-austral", "rotulo": {"pt": "Ver repositório no GitHub", "en": "View repository on GitHub"}, "secundario": true}
+    {"rotulo": {"pt": "Disponível em abril de 2027", "en": "Available in April 2027"}}
   ],
   "ficha": [
     {"campo": "Tipo", "valor": {"pt": "Painel interativo em quatro páginas: Municípios, Escoamento, Segmentos e Metodologia e Créditos", "en": "Interactive dashboard in four pages: Municipalities, Shipping routes, Segments, and Methodology and Credits"}},
@@ -57,7 +57,7 @@
     "nota": "ponto simbólico no centro aproximado da Bahia: o painel cobre o estado inteiro",
     "cor": "rosa",
     "rotulo": {"pt": "Comércio Exterior da Bahia", "en": "Bahia Foreign Trade"},
-    "detalhe": {"pt": "Painel interativo · 2026", "en": "Interactive dashboard · 2026"},
+    "detalhe": {"pt": "Painel interativo · abr/2027", "en": "Interactive dashboard · Apr 2027"},
     "posicao_rotulo": [26, 40]
   },
   "palavras_chave": "comex exportação importação comércio exterior bahia municípios portos escoamento segmentos painel dashboard trade exports imports"

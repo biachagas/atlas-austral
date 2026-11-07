@@ -36,7 +36,7 @@
   const recorteTxt = r => (A.lang === "en" ? RECORTE_EN[r] || r : r);
 
   function selos(p) {
-    const s = (p.selos || []).map(x => `<span class="selo">${esc(x)}</span>`);
+    const s = (p.selos || []).map(x => `<span class="selo">${esc(A.t(x))}</span>`);
     if (p.status === "em andamento") s.splice(1, 0, `<span class="selo and">${esc(A.t("em andamento"))}</span>`);
     if (p.doi) s.push(`<span class="selo doi">DOI</span>`);
     return s.join("");
@@ -164,7 +164,9 @@
     document.getElementById("trilha-atual").textContent = titulo;
     const im = p.imagem;
     const linkIm = im.link ? ` <a href="${esc(im.link.url)}">${esc(L(im.link.rotulo))}</a>` : "";
-    const botoes = (p.botoes || []).map(b => `<a class="btn${b.secundario ? " sec" : ""}" href="${esc(b.url)}">${esc(L(b.rotulo))}</a>`).join(" ");
+    const botoes = (p.botoes || []).map(b => b.url
+      ? `<a class="btn${b.secundario ? " sec" : ""}" href="${esc(b.url)}">${esc(L(b.rotulo))}</a>`
+      : `<span class="btn btn-off" aria-disabled="true">${esc(L(b.rotulo))}</span>`).join(" "); // botão sem "url" = desativado (ex.: pré-lançamento)
     const linhas = (p.ficha || []).map(f => `<tr><th scope="row">${esc(A.t(f.campo))}</th><td>${L(f.valor)}</td></tr>`).join("");
     const pubs = (p.publicacoes || []).length
       ? `<ul class="lista8">${p.publicacoes.map(x => `<li>${L(x.referencia)}${x.url ? ` <a href="${esc(x.url)}">${esc(A.t("Ver publicação →"))}</a>` : ""}</li>`).join("")}</ul>`
